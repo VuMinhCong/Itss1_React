@@ -1,0 +1,143 @@
+.list-urls {
+  padding: 0.5em;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0.5em;
+  }
+  &::-webkit-scrollbar-track {
+    background: rgb(254 240 138);
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(239 68 68);
+    cursor: pointer;
+
+    &:hover {
+      background: rgb(220 38 38);
+    }
+  }
+
+  .list-header {
+    top: 0;
+    position: sticky;
+    position: -webkit-sticky;
+  }
+
+  .url-item {
+    margin-bottom: 0.5em;
+    padding: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 2fr 2fr;
+    align-items: center;
+    border-radius: 0.5em;
+    border: solid 0.1rem darkgray;
+    transition: box-shadow 0.1s;
+
+    * {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &:not(:first-child):hover {
+      box-shadow: 0.5em 0.5em 2em gray;
+      cursor: pointer;
+    }
+
+    .custom-url {
+      align-items: center;
+      justify-items: center;
+      justify-content: end;
+    }
+
+    .edit-url,
+    .delete-url {
+      margin-left: 0.5em;
+      padding: 0.5em;
+      border-radius: 0.2em;
+
+      img {
+        width: 0.8em;
+      }
+    }
+
+    &.filter-item {
+      top: 3em;
+      position: sticky;
+      position: -webkit-sticky;
+      &:hover {
+        box-shadow: unset;
+      }
+
+      input {
+        padding: 0.2em;
+        border: 0.1em solid darkgray;
+        border-radius: 0.3em;
+        outline: none;
+      }
+    }
+
+    .confirm-edit,
+    .confirm-delete {
+      display: none;
+
+      div {
+        margin-left: 0.5em;
+        padding: 0.2em 0.5em;
+        border-radius: 0.2em;
+        text-overflow: unset;
+      }
+    }
+
+    .url,
+    .code {
+      input {
+        display: none;
+      }
+    }
+
+    &.edit {
+      border: 0.2em solid #7359a8;
+
+      .edit-url,
+      .delete-url {
+        display: none;
+      }
+
+      .confirm-edit {
+        display: flex;
+      }
+
+      .url,
+      .code {
+        padding: 0 0.2em;
+        input {
+          padding: 0.5em;
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 0.3em;
+          border: solid 1px gray;
+          outline: none;
+        }
+      }
+
+      .url a,
+      .code span {
+        display: none;
+      }
+    }
+
+    &.delete {
+      border: 0.2em solid red;
+      .edit-url,
+      .delete-url {
+        display: none;
+      }
+
+      .confirm-delete {
+        display: flex;
+      }
+    }
+  }
+}

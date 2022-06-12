@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app {
+  grid-template-rows: 1fr 8fr 1fr;
+  height: 100vh;
+  & > * {
+    border-radius: 0.2em;
+  }
+
+  .main {
+    max-height: 80vh;
+
+    & > * {
+      border-radius: 0.2em;
+    }
+  }
+}

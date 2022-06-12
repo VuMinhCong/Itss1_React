@@ -1,0 +1,96 @@
+.footer {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  align-items: center;
+  background-image: url('https://wallpaperaccess.com/full/389987.jpg');
+
+  .footer--div1 {
+    .footer--topic {
+      font-size: 18px;
+      text-align: center;
+      color: rgb(218, 125, 58);
+      padding-top: 0px;
+    }
+    b {
+      transition: 0.3s;
+    }
+
+    .footer--font {
+      cursor: pointer;
+    }
+    .footer--font:hover {
+      color: rgb(207, 226, 35);
+    }
+  }
+
+  .footer--div2 {
+    .footer--topic {
+      font-size: 18px;
+      text-align: center;
+      color: rgb(218, 125, 58);
+      padding-top: 0px;
+      :hover {
+        color: rgb(207, 226, 35);
+      }
+    }
+
+    b {
+      transition: 0.3s;
+    }
+
+    .footer--font {
+      cursor: pointer;
+    }
+  }
+}
+
+@-webkit-keyframes my {
+  0% {
+    color: #d9d92d;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+@-moz-keyframes my {
+  0% {
+    color: #d9d92d;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+@-o-keyframes my {
+  0% {
+    color: #d9d92d;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+@keyframes my {
+  0% {
+    color: #d9d92d;
+  }
+  50% {
+    color: #fff;
+  }
+  100% {
+    color: #f8cd0a;
+  }
+}
+.test {
+  -webkit-animation: my 1000ms infinite;
+  -moz-animation: my 1000ms infinite;
+  -o-animation: my 1000ms infinite;
+  animation: my 1000ms infinite;
+}
